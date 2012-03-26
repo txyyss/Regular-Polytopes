@@ -1,0 +1,31 @@
+\documentclass[cs4size,a4paper,adobefonts,openany]{ctexbook}
+\usepackage[colorlinks=true,linkcolor=black]{hyperref}
+\usepackage{indentfirst}
+\usepackage[a4paper,left=2.5cm,right=2.5cm,bottom=2.5cm,top=2.5cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Minion Pro}
+\pagestyle{plain}
+\punctstyle{kaiming}
+%\usepackage{unicode-math}
+%\setmathfont{STIX Math}
+
+\usepackage{amsmath,amsthm,amssymb}
+\newtheorem{defn}{定义}
+\newtheorem{thm}{定理}
+\newcommand{\pname}[1]{\underline{#1}}
+\numberwithin{equation}{section}
+\CTEXsetup[number=\thechapter]{chapter}
+\begin{document}
+\title{\bfseries Regular Polytopes 的学习笔记}
+\author{王盛颐}
+\date{}
+\maketitle
+\setcounter{page}{1}
+\chapter{POLYGONS AND POLYHEDRA}
+\section{Regular polygons}
+\begin{defn}
+  假设有 $p$ 个点 $A_1,A_2,\dots,A_p$，那么 $p$-边形（$p$-gon）被定义为
+  连接这些点的 $p$ 条直线段 $A_1A_2,A_2A_3,\dots,A_pA_1$ 形成的环路。这
+  些线段和点分别被称为多边形的\pname{边}和\pname{顶点}。
+\end{defn}
+\end{document}
