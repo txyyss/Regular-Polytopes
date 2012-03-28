@@ -53,7 +53,7 @@ a_kx+b_ky \leq c_k\qquad (k=1,2,\dots,p)
 是指正三角形，$\{4\}$ 表示正方形，$\{5\}$ 表示正五边形。
 
 很容易看出一个正多边形有一个\pname{中心点}，从中心点出发到各个角距离相
-等为 $_0R$，到各条边距离相等为 $_1R$。这意味着两个同心圆，分别是正多边
+等为 ${_0R}$，到各条边距离相等为 ${_1R}$。这意味着两个同心圆，分别是正多边
 形的外接圆和内切圆。
 
 有时可以将 $p$ 边形的边认作是首尾相接的 $p$ 个向量。将这些向量的起点并
@@ -62,4 +62,48 @@ $2\pi$。那么 $\{p\}$ 的每个外角大小都是 $2\pi/p$，所以每个内�
 \begin{equation}
   (1-\frac{2}{p})\pi
 \end{equation}
+
+这也可以从图 \ref{fig:pentagon} 中的直角三角形 $O_2O_1O_0$ 看出来。
+$O_2$ 是中心，$O_1$ 是一条边的重点，$O_0$ 是这条边的一个端点。直角在
+$O_1$ 处，$O_2$ 处的角度显然是 $\pi/p$。若边长为 $2l$ 则我们有：
+\[
+O_0O_1=l,\quad O_0O_2={_0R}, \quad O_1O_2={_1R}
+\]
+因此有
+\begin{equation}
+  {_0R}=l\csc\frac{\pi}{p}\qquad {_1R}=l\cot\frac{\pi}{p}
+\end{equation}
+
+那么 $\{p\}$ 的面积就是这样 $p$ 个三角形的面积和：
+\begin{equation}
+  C_p = pl\cdot {_1R} = pl^2\cot\frac{\pi}{p}
+\end{equation}
+周长则是
+\begin{equation}
+  S=2pl
+\end{equation}
+
+\begin{figure}[htbp]
+  \centering \includegraphics[width=0.7\textwidth]{images/pentagon}
+  \caption{正 $p$ 边形的角度长度关系} \label{fig:pentagon}
+\end{figure}
+
+当 $p$ 无限增长下去，则 $S/{_0R}$ 和 $S/{_1R}$ 都会渐渐接近 $2\pi$ （阿基米
+  德当年就是这么算圆周率的，他计算用的 $p=96$）。
+
+我们也可以计算出 $\{p\}$ 各个顶点的笛卡尔坐标为
+\[
+\left({_0R}\cos\frac{2k\pi}{p},{_1R}\sin\frac{2k\pi}{p}\right)\qquad(k=0,1,\dots,p-1)
+\]
+
+把这些坐标看作复平面上的点，那么外接圆半径 ${_0R}=1$ 的 $\{p\}$ 的顶点可
+以认为是分圆方程
+\begin{equation}
+  z^p=1
+\end{equation}
+的根 $e^{2k\pi i/p}$。
+
+有时需要扩展 $p$ 边形的定义，允许多边形的边为曲线。比如有时候可能会考虑
+\pname{圆多边形}，它的边都是球面上大圆的圆弧，这种情况下可以有二边形。
+
 \end{document}
